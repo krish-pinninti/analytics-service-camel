@@ -1,0 +1,243 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.technoaps.services</groupId>
+  <artifactId>analytics-service-camel</artifactId>
+  <packaging>war</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>analyticsservice Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+
+  <properties>
+  	<mavenCompilerVersion>3.5.1</mavenCompilerVersion>
+  	<mavenJarVersion>2.6</mavenJarVersion>
+  	<mavenWarVersion>2.6</mavenWarVersion>
+  	<mavenExecVersion>1.4.0</mavenExecVersion>
+  	<mavenJavaDocVersion>2.10.4</mavenJavaDocVersion>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	
+  	<camelVersion>2.21.0</camelVersion>
+  	<springVersion>5.0.6.RELEASE</springVersion>
+  	<junit-version>3.8.1</junit-version>
+  	<hibernateVersion>5.3.0.Final</hibernateVersion>
+  	<hibernateJpaVersion>1.0.2.Final</hibernateJpaVersion>
+  	<dbcpVersion>1.4</dbcpVersion>
+  	<jacksonVersion>1.9.12</jacksonVersion>
+  	<gsonVersion>2.8.4</gsonVersion>
+  	<slf4jVersion>1.7.25</slf4jVersion>
+  </properties>
+  
+  <dependencies>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-core</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-http4</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-http</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-spring</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-swagger-java</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-servlet</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-jpa</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-sql</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-jdbc</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-jackson</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-servlet</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-test-spring</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-bean-validator</artifactId>
+  	<version>${camelVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.springframework</groupId>
+  	<artifactId>spring-web</artifactId>
+  	<version>${springVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.springframework</groupId>
+  	<artifactId>spring-tx</artifactId>
+  	<version>${springVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.springframework</groupId>
+  	<artifactId>spring-orm</artifactId>
+  	<version>${springVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.springframework</groupId>
+  	<artifactId>spring-context</artifactId>
+  	<version>${springVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.springframework</groupId>
+  	<artifactId>spring-beans</artifactId>
+  	<version>${springVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.springframework</groupId>
+  	<artifactId>spring-core</artifactId>
+  	<version>${springVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>commons-dbcp</groupId>
+  	<artifactId>commons-dbcp</artifactId>
+  	<version>${dbcpVersion}</version>
+  </dependency>
+  
+  
+    <dependency>
+  	<groupId>org.codehaus.jackson</groupId>
+  	<artifactId>jackson-core-asl</artifactId>
+  	<version>${jacksonVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>com.fasterxml.jackson.core</groupId>
+  	<artifactId>jackson-core</artifactId>
+  	<version>2.8.7</version>
+  </dependency>
+ 
+  <dependency>
+  	<groupId>com.fasterxml.jackson.core</groupId>
+  	<artifactId>jackson-annotations</artifactId>
+  	<version>2.8.7</version>
+  </dependency> 
+  
+   <dependency>
+  	<groupId>com.google.code.gson</groupId>
+  	<artifactId>gson</artifactId>
+  	<version>${gsonVersion}</version>
+  </dependency>
+  
+   <dependency>
+  	<groupId>org.slf4j</groupId>
+  	<artifactId>slf4j-api</artifactId>
+  	<version>${slf4jVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>commons-validator</groupId>
+  	<artifactId>commons-validator</artifactId>
+  	<version>1.6</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.commons</groupId>
+  	<artifactId>commons-io</artifactId>
+  	<version>1.3.2</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.hibernate.javax.persistence</groupId>
+  	<artifactId>hibernate-jpa-2.1-api</artifactId>
+  	<version>${hibernateJpaVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.hibernate</groupId>
+  	<artifactId>hibernate-entitymanager</artifactId>
+  	<version>${hibernateVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.hibernate</groupId>
+  	<artifactId>hibernate-core</artifactId>
+  	<version>${hibernateVersion}</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.camel</groupId>
+  	<artifactId>camel-spring-redis</artifactId>
+  	<version>2.21.1</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.springframework.data</groupId>
+  	<artifactId>spring-data-redis</artifactId>
+  	<version>2.0.8.RELEASE</version>
+  </dependency>
+  
+  
+<dependency>
+    <groupId>joda-time</groupId>
+    <artifactId>joda-time</artifactId>
+    <version>2.7</version>
+</dependency>
+  
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit-version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies> 
+  <build>
+    <finalName>analytics-service-camel</finalName>
+  </build>
+</project>
