@@ -20,7 +20,7 @@
   	<camelVersion>2.21.0</camelVersion>
   	<springVersion>5.0.6.RELEASE</springVersion>
   	<junit-version>3.8.1</junit-version>
-  	<hibernateVersion>5.3.0.Final</hibernateVersion>
+  	<hibernateVersion>5.4.24.Final</hibernateVersion>
   	<hibernateJpaVersion>1.0.2.Final</hibernateJpaVersion>
   	<dbcpVersion>1.4</dbcpVersion>
   	<jacksonVersion>1.9.12</jacksonVersion>
