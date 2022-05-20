@@ -24,7 +24,7 @@
   	<hibernateJpaVersion>1.0.2.Final</hibernateJpaVersion>
   	<dbcpVersion>1.4</dbcpVersion>
   	<jacksonVersion>1.9.12</jacksonVersion>
-  	<gsonVersion>2.8.4</gsonVersion>
+  	<gsonVersion>2.8.9</gsonVersion>
   	<slf4jVersion>1.7.25</slf4jVersion>
   </properties>
   
